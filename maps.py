@@ -26,9 +26,7 @@ map_widget.place(x=0,y=0)
 map_widget.set_zoom(10)
 map_widget.set_position(50,70)
 marker0=map_widget.set_address("Бибирево",marker=True)
-#marker1=map_widget.set_marker(67,53,text="1")
-# marker2=map_widget.set_address("Красная площадь",marker=True,text="2")
-# map_widget.set_path([marker0.position,marker1.position,marker2.position])
+
 markers=[]
 def addmark(cords):
     marker3=map_widget.set_marker(cords[0],cords[1])
@@ -52,7 +50,7 @@ def inf():
 
 a = Button(window, text="Del", bg="black", fg="white", padx="20", pady="8", highlightcolor="black", bd=4, command=delet)
 a.place(x=900,y=10)
-map_widget.add_right_click_menu_command(label="addmark",command=addmark,pass_coords=True)
+map_widget.add_right_click_menu_command(label="add mark",command=addmark,pass_coords=True)
 
 #map_widget.set_tile_server("https://a.tile.openstreetmap.org/{z}/{x}/{y}.png")  # OpenStreetMap (default)
 #map_widget.set_tile_server("https://mt0.google.com/vt/lyrs=m&hl=en&x={x}&y={y}&z={z}&s=Ga", max_zoom=22)  # google normal
